@@ -7,6 +7,7 @@ function init(){
 }
 
 let colours = [
+    'white',
     'red',
     'orange',
     'yellow',
@@ -16,8 +17,14 @@ let colours = [
     'purple',
 ];
 
+let currentColour = 0;
+
 function colourChange(){
-    console.log('katt');
+    currentColour = currentColour + 1;
+    if(currentColour >= colours.length){
+        currentColour = 0;
+    }
+    document.body.style.backgroundColor = colours[currentColour];
 }
 document.addEventListener('DOMContentLoaded', init);
 
